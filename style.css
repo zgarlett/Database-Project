@@ -22,8 +22,8 @@ header {
 	font-size: 1.2em;
 	height: 75px;
 	color: white;
-	padding-left: 5em;
-	padding-right: 5em;
+	padding-left: 3em;
+	padding-right: 3em;
 
 }
 
@@ -92,6 +92,7 @@ a:visited:hover {
 .nav li{
 	list-style: none;
 	padding: 5px;
+	padding-left: 15px;
 }
 
 .nav li:hover {
