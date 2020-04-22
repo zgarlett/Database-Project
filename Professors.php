@@ -10,34 +10,28 @@
 		<header class="main-header">
 			<p class="name">The Best Group</p>
 			<ul class="nav">
-				<li><a href="index.html">Search Database</a></li>
-				<li>Add Class</li>
-				<li><a href="enrollstudent.html">Enroll Student</a></li>
-				<li><a href="hireprofessor.html">Hire Professor</a></li>
-				<li><a href="Professors.html">Professors Dashboad</a></li>
+				<li><a href="index.php">Search Database</a></li>
+				<li><a href="addclass.php">Add Class</a></li>
+				<li><a href="enrollstudent.php">Enroll Student</a></li>
+				<li><a href="hireprofessor.php">Hire Professor</a></li>
+				<li>Professors Dashboard</li>
 			</ul>
 		</header>
      <form class="form" action="insert.php" method="POST">
       <table>
        <tr>
-        <td>Name of Class :</td>
+        <td>Professor :</td>
         <td><input type="text" name="username" required></td>
        </tr>
        <tr>
-        <td>CRN # :</td>
+        <td>CWID :</td>
         <td><input type="cwid" name="cwid" required></td>
        </tr>
        <tr>
-     
+       
        </tr>
-       <tr>
-        <td>College :</td>
-        <td><input type="email" name="email" required></td>
-       </tr> 
        <tr>
         
-       </tr>
-       <tr>
         <td><input type="submit" value="Submit"></td>
        </tr>
       </table>

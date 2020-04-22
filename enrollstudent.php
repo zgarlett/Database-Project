@@ -10,29 +10,28 @@
 		<header class="main-header">
 			<p class="name">The Best Group</p>
 			<ul class="nav">
-				<li><a href="index.html">Search Database</a></li>
-				<li><a href="addclass.html">Add Class</a></li>
-				<li><a href="enrollstudent.html">Enroll Student</a></li>
-				<li>Hire Professor</li>
-				<li><a href="Professors.html">Professors Dashboad</a></li>
+				<li><a href="index.php">Search Database</a></li>
+				<li><a href="addclass.php">Add Class</a></li>
+				<li>Enroll Student</li>
+				<li><a href="hireprofessor.php">Hire Professor</a></li>
+				<li><div class="dropdown">
+  						Professor's Dashboard
+  							<div class="dropdown-content">
+    							<a href="#">Teach Class</a>
+    							<a href="#">Add Grades</a>
+  							</div>
+					</div></li>
 			</ul>
 		</header>
-     <form class="form" action="insert.php" method="POST">
+     <form class="form" action="insertStudent.php" method="POST">
       <table>
        <tr>
         <td>Name :</td>
-        <td><input type="text" name="username" required></td>
+        <td><input type="text" name="name" required></td>
        </tr>
        <tr>
-        <td>CWID :</td>
-        <td><input type="cwid" name="cwid" required></td>
-       </tr>
-       <tr>
-        <td>Gender :</td>
-        <td>
-         <input type="radio" name="gender" value="m" required>Male
-         <input type="radio" name="gender" value="f" required>Female
-        </td>
+        <td>Student ID :</td>
+        <td><input type="SID" name="SID" required></td>
        </tr>
        <tr>
         <td>Email :</td>
@@ -41,19 +40,14 @@
        <tr>
         <td>Phone no :</td>
         <td>
-         <select name="phoneCode" required>
-          <option selected hidden value="">Select Code</option>
-          <option value="918">918</option>
-          <option value="405">405</option>
-          <option value="580">580</option>
-         </select>
+         
          <input type="phone" name="phone" required>
         </td>
        </tr>
 	   <tr>
-		  <td>SSN :</td>
+		  <td>Major :</td>
 		   <td>
-		   	<input name="SSN" required>
+		   	<input name="major" required>
 		   </td>
 		</tr>
 		  <tr>
@@ -67,6 +61,19 @@
           		<option selected hidden value="">Select Campus</option>
           		<option value="Stillwater">Stillwater</option>
           		<option value="Tulsa">Tulsa</option>
+         		</select>
+			  </td>
+		  </tr>
+		  <tr>
+			  <td>Year :</td>
+			  <td>
+			  	<select name="year" required>
+          		<option selected hidden value="">Select Year</option>
+          		<option value="Freshman">Freshman</option>
+          		<option value="Sophmore">Sophmore</option>
+				<option value="Junior">Junior</option>
+          		<option value="Senior">Senior</option>
+				<option	value="Other">Other</option>
          		</select>
 			  </td>
 		  </tr>
