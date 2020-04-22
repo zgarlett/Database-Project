@@ -16,7 +16,7 @@
 				<li><div class="dropdown">
   						Professor's Dashboard
   							<div class="dropdown-content">
-    							<a href="teach.php">Teach Class</a>
+    							<a href="#">Teach Class</a>
     							<a href="grades.php">Add Grades</a>
   							</div>
 					</div></li>
