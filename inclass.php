@@ -10,15 +10,28 @@
 			<p class="name">The Best Group</p>
 			<ul class="nav">
 				<li><a href="index.php">Search Database</a></li>
-				<li><a href="addclass.php">Add Class</a></li>
 				<li><div class="dropdown">
-  						Enroll Student
+  						Class
   							<div class="dropdown-content">
-    							<a href="enrollstudent.php">In College</a>
-    							<a href="inclass.php">In Class</a>
+    							<a href="addclass.php">Add</a>
+    							<a href="dropclass.php">Remove</a>
   							</div>
 					</div></li>
-				<li><a href="hireprofessor.php">Hire Professor</a></li>
+				<li><div class="dropdown">
+  						Student
+  							<div class="dropdown-content">
+    							<a href="enrollstudent.php">Enroll College</a>
+    							<a href="inclass.php">Enroll Class</a>
+								<a href="graduate.php">Graduate</a>
+  							</div>
+					</div></li>
+				<li><div class="dropdown">
+  						Professor
+  							<div class="dropdown-content">
+    							<a href="hireprofessor.php">Hire</a>
+    							<a href="fireProfessor.php">Remove</a>
+  							</div>
+					</div></li>
 				<li><div class="dropdown">
   						Professor's Dashboard
   							<div class="dropdown-content">
@@ -26,6 +39,7 @@
     							<a href="grades.php">Add Grades</a>
   							</div>
 					</div></li>
+				<li><a href="data.php">[+]</a></li>
 			</ul>
 		</header>
 		<body>
@@ -36,6 +50,7 @@
     }
 	$resultClasses = $mysqli->query("SELECT * FROM Course");
 	$resultClasses2 = $mysqli->query("SELECT * FROM Course");
+	$resultsStudent = $mysqli->query("SELECT * FROM Student");
 		
 ?>
 		
@@ -51,8 +66,15 @@
 				  $dept = $rows['Department'];
 				  $time = $rows['Time'];
 				  $faculty = $rows['FID'];
+				  if($faculty != ''){
+				  $facultyNameQuery = $mysqli->query("Select name FROM Faculty WHERE FID = $faculty");
+				  $fname = $facultyNameQuery->fetch_assoc();
+				  $fnameResults = $fname['name'];
+				  } else {
+					  $fnameResults = 'No Professor Yet';
+				  }
 				  $classtype = $rows['Class_Type'];
-				  echo "<tr><td>$course</td><td>$dept</td><td>$time</td><td>$faculty</td><td>$classtype</td></tr>";
+				  echo "<tr><td>$course</td><td>$dept</td><td>$time</td><td>$fnameResults</td><td>$classtype</td></tr>";
 			  }
 			  ?>
 			  </td>
@@ -73,7 +95,17 @@
 				?>
 		   </select>
 			</td>
-				<td>Student ID : </td><td><input name="SID"></td>
+				<td>Student ID : </td>
+				<td><select name="SID">
+						<option selected hidden value="">Student Name</option>
+						<?php 
+							while($row = $resultsStudent->fetch_assoc()){
+								$ID = $row['SID'];
+								$names = $row['Name'];
+								echo "<option value='$ID'>$names</option>";
+							}
+							?>
+					   </select></td>
 				<td><button type="submit" name="Submit">Submit</button></td>
 	   </tr>
 			</table>

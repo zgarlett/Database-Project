@@ -11,15 +11,28 @@
 			<p class="name">The Best Group</p>
 			<ul class="nav">
 				<li><a href="index.php">Search Database</a></li>
-				<li><a href="addclass.php">Add Class</a></li>
 				<li><div class="dropdown">
-  						Enroll Student
+  						Class
   							<div class="dropdown-content">
-    							<a href="enrollstudent.php">In College</a>
-    							<a href="inclass.php">In Class</a>
+    							<a href="addclass.php">Add</a>
+    							<a href="dropclass.php">Remove</a>
   							</div>
 					</div></li>
-				<li>Hire Professor</li>
+				<li><div class="dropdown">
+  						Student
+  							<div class="dropdown-content">
+    							<a href="enrollstudent.php">Enroll College</a>
+    							<a href="inclass.php">Enroll Class</a>
+								<a href="graduate.php">Graduate</a>
+  							</div>
+					</div></li>
+				<li><div class="dropdown">
+  						Professor
+  							<div class="dropdown-content">
+    							<a href="hireprofessor.php">Hire</a>
+    							<a href="fireProfessor.php">Remove</a>
+  							</div>
+					</div></li>
 				<li><div class="dropdown">
   						Professor's Dashboard
   							<div class="dropdown-content">
