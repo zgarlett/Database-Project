@@ -7,6 +7,11 @@
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
+-- Host: localhost
+-- Username: root
+-- Database Name: Project_Schema
+-- Password: (leave blank)
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
