@@ -12,7 +12,13 @@
 			<ul class="nav">
 				<li><a href="index.php">Search Database</a></li>
 				<li><a href="addclass.php">Add Class</a></li>
-				<li><a href="enrollstudent.php">Enroll Student</a></li>
+				<li><div class="dropdown">
+  						Enroll Student
+  							<div class="dropdown-content">
+    							<a href="enrollstudent.php">In College</a>
+    							<a href="inclass.php">In Class</a>
+  							</div>
+					</div></li>
 				<li>Hire Professor</li>
 				<li><div class="dropdown">
   						Professor's Dashboard
@@ -21,6 +27,7 @@
     							<a href="grades.php">Add Grades</a>
   							</div>
 					</div></li>
+				<li><a href="data.php">[+]</a></li>
 			</ul>
 		</header>
      <form class="form" action="insertProfessor.php" method="POST">
@@ -73,6 +80,7 @@
         <td><input type="submit" value="Submit"></td>
        </tr>
       </table>
+      
      </form>
     </body>
     </html>

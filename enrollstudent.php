@@ -12,7 +12,13 @@
 			<ul class="nav">
 				<li><a href="index.php">Search Database</a></li>
 				<li><a href="addclass.php">Add Class</a></li>
-				<li>Enroll Student</li>
+				<li><div class="dropdown">
+  						Enroll Student
+  							<div class="dropdown-content">
+    							<a href="incollege.php">In College</a>
+    							<a href="inclass.php">In Class</a>
+  							</div>
+					</div></li>
 				<li><a href="hireprofessor.php">Hire Professor</a></li>
 				<li><div class="dropdown">
   						Professor's Dashboard

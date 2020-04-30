@@ -28,7 +28,9 @@ header {
 }
 
 body {
+	width: 100%;
 	margin: 0;
+	text-align:  center;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	
 }
@@ -56,6 +58,8 @@ a {
 table {
 	padding: 15px;
 	text-align: center;
+	align-content: center;
+	align-self: center;
 }
 
 tr, th {
@@ -64,6 +68,7 @@ tr, th {
 
 td {
 	padding: 5px;
+	width: 10em;
 }
 
 a:link {
